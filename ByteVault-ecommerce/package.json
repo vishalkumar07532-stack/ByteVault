@@ -1,0 +1,16 @@
+{
+  "name": "bytevault-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ByteVault premium computer hardware e-commerce store",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "resend": "^4.5.0"
+  }
+}

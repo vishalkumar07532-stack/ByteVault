@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ByteVault — Smart Storage. Reliable Hardware.</title>
+  <meta name="description" content="ByteVault — premium HDDs, SSDs, RAM, storage and computer hardware.">
+  <meta name="theme-color" content="#07090d">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="ByteVault home">
+      <span class="brand-mark">BV</span>
+      <span>Byte<span>Vault</span></span>
+    </a>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#finder">Storage Finder</a><a href="#trust">Why ByteVault</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">♡ <span id="wishlistCount">0</span></button>
+      <button class="icon-btn" id="compareBtn" aria-label="Compare">⇄ <span id="compareCount">0</span></button>
+      <button class="cart-btn" id="cartBtn">Cart <span id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">BYTEVAULT / HARDWARE & STORAGE</div>
+        <h1>Upgrade Your <span>Storage.</span><br>Upgrade Your Speed.</h1>
+        <p>Premium HDDs, SSDs, RAM and computer hardware at competitive prices — selected for real-world performance.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#shop">Shop Now <span>↗</span></a>
+          <a class="secondary-btn" href="#finder">Find My Storage</a>
+        </div>
+        <div class="hero-metrics"><div><b>100%</b><small>Test-focused listings</small></div><div><b>Fast</b><small>Shipping-ready catalog</small></div><div><b>7+</b><small>Hardware categories</small></div></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="drive">
+          <div class="drive-top"><span>BYTEVAULT</span><i>◉</i></div>
+          <div class="drive-chip"></div><div class="drive-line"></div><div class="drive-line short"></div>
+          <div class="drive-label">NVMe / STORAGE CORE</div>
+        </div>
+        <div class="floating-chip chip-one">⚡ 3,500 MB/s</div>
+        <div class="floating-chip chip-two">● HEALTH 100%</div>
+      </div>
+    </section>
+
+    <section class="ticker"><span>HDD</span><span>SSD</span><span>NVMe</span><span>DDR4</span><span>DDR5</span><span>EXTERNAL STORAGE</span><span>ACCESSORIES</span></section>
+
+    <section class="section" id="finder">
+      <div class="section-head"><div><div class="eyebrow">SMART MATCH</div><h2>Find Your Perfect Storage</h2></div><p>Tell us what you're building. ByteVault will narrow the catalog for you.</p></div>
+      <div class="finder-card">
+        <div class="finder-step"><label>01 / Device</label><select id="finderDevice"><option>Laptop</option><option>Desktop</option><option>Gaming PC</option><option>Other</option></select></div>
+        <div class="finder-step"><label>02 / Goal</label><select id="finderGoal"><option>More Storage</option><option>Faster Performance</option><option>Backup</option></select></div>
+        <div class="finder-step"><label>03 / Capacity</label><select id="finderCapacity"><option>256GB</option><option>512GB</option><option>1TB</option><option>2TB</option><option>4TB+</option></select></div>
+        <div class="finder-step"><label>04 / Budget</label><select id="finderBudget"><option>Under ₹2,500</option><option>₹2,500 – ₹5,000</option><option>₹5,000 – ₹8,000</option><option>₹8,000+</option></select></div>
+        <button class="primary-btn" id="findBtn">Show Matches</button>
+      </div>
+      <div id="finderResults" class="finder-results"></div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-head">
+        <div><div class="eyebrow">THE VAULT</div><h2>Hardware, without the noise.</h2></div>
+        <div class="search-wrap"><input id="searchInput" placeholder="Search HDD, SSD, RAM, brands..."><span>⌕</span></div>
+      </div>
+      <div class="toolbar">
+        <div class="filters" id="categoryFilters">
+          <button class="filter active" data-category="All">All</button><button class="filter" data-category="HDD">HDD</button><button class="filter" data-category="SSD">SSD</button><button class="filter" data-category="RAM">RAM</button><button class="filter" data-category="Laptop RAM">Laptop RAM</button><button class="filter" data-category="Desktop RAM">Desktop RAM</button><button class="filter" data-category="External Storage">External</button>
+        </div>
+        <select id="sortSelect"><option value="newest">Newest</option><option value="low">Price Low to High</option><option value="high">Price High to Low</option><option value="stock">Availability</option></select>
+      </div>
+      <div class="advanced-filters">
+        <select id="brandFilter"><option value="All">All Brands</option></select>
+        <select id="capacityFilter"><option value="All">All Capacities</option></select>
+        <select id="conditionFilter"><option value="All">All Conditions</option><option>New</option><option>Used</option></select>
+        <select id="availabilityFilter"><option value="All">Availability</option><option value="In stock">In stock</option><option value="Low stock">Low stock</option></select>
+        <input id="maxPrice" type="number" min="0" placeholder="Max price ₹">
+      </div>
+      <div id="productsGrid" class="products-grid"></div>
+    </section>
+
+    <section class="section trust" id="trust">
+      <div class="section-head"><div><div class="eyebrow">WHY BYTEVAULT</div><h2>Built around buyer confidence.</h2></div></div>
+      <div class="trust-grid">
+        <article><span>◉</span><h3>Tested Products</h3><p>Listings can include measurable health and test data when available.</p></article>
+        <article><span>◇</span><h3>Genuine Hardware</h3><p>Clear brand, model and condition information for every listed product.</p></article>
+        <article><span>⌁</span><h3>Secure Checkout</h3><p>Checkout is handled server-side; payment credentials are never stored here.</p></article>
+        <article><span>→</span><h3>Fast Shipping</h3><p>Stock visibility helps you choose hardware that is ready to dispatch.</p></article>
+        <article><span>?</span><h3>Human Support</h3><p>Call 9317170420 or email Vishalkumar07532@gmail.com for assistance.</p></article>
+      </div>
+    </section>
+
+    <section class="section recently"><div class="section-head"><div><div class="eyebrow">YOUR VAULT</div><h2>Recently Viewed</h2></div></div><div id="recentGrid" class="products-grid compact"></div></section>
+  </main>
+
+  <footer>
+    <div><a class="brand" href="#home"><span class="brand-mark">BV</span><span>Byte<span>Vault</span></span></a><p>Smart Storage. Reliable Hardware.</p></div>
+    <div><h4>Explore</h4><a href="#shop">Shop</a><a href="#finder">Storage Finder</a><a href="#trust">Why ByteVault</a></div>
+    <div><h4>Categories</h4><a href="#shop">HDD</a><a href="#shop">SSD</a><a href="#shop">RAM</a><a href="#shop">External Storage</a></div>
+    <div><h4>Support</h4><a href="#">About Us</a><a href="#">Contact</a><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Return Policy</a></div>
+    <div><h4>Contact</h4><p>9317170420</p><p>Vishalkumar07532@gmail.com</p><div class="socials"><button>in</button><button>ig</button><button>wa</button></div></div>
+    <div class="copyright">© 2026 ByteVault. Product information is subject to stock and verification.</div>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <aside class="drawer" id="cartDrawer">
+    <div class="drawer-head"><h2>Your Cart</h2><button class="close-btn" data-close="cartDrawer">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-summary"><div><span>Subtotal</span><b id="cartSubtotal">₹0</b></div><div><span>Delivery</span><b id="cartDelivery">₹99</b></div><div class="total"><span>Total</span><b id="cartTotal">₹99</b></div><button class="primary-btn wide" id="checkoutBtn">Proceed to Checkout</button></div>
+  </aside>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
